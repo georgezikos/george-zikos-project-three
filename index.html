@@ -7,7 +7,75 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-
+    <!-- Step 2: Gender radio -->
+    <!-- Step 3a: Bodyfat male x 8 radio -->
+    <!-- Step 3b: Bodyfat female x 8 radio -->
+    <!-- Step 4a: Male goal -->
+    <!-- Step 4b: Female goal -->
+    <header>
+        <h1>Macronutrient Calculator</h1>
+        <p>Get started below.</p>
+    </header>
+    <main>
+        
+    </main>
+    <footer>
+        <!-- Add ariadescribedby attributes -->
+        <!-- Step 1 Starts -->
+        <form action="" method="" name="">
+            <fieldset>
+                <label for="fullName" autocapitalize="true">Full Name:</label>
+                <input type="text" name="fullName" placeholder="Full Name" id="fullName" required>
+                <label for="emailAddress">Email:</label>
+                <input type="email" name="emailAddress" placeholder="Email Address" id="emailAddress" required>
+            </fieldset>
+        <!-- Step 1 Ends -->
+        <!-- Step 2 Starts -->
+            <fieldset>
+                <legend>Gender:</legend>
+                <label for="genderMale">Male:</label>
+                <input type="radio" name="genderChoice" id="genderMale" required>
+                <label for="genderFemale">Female:</label>
+                <input type="radio" name="genderChoice" id="genderFemale" required>
+            </fieldset>
+        <!-- Step 2 Ends -->
+        <!-- Step 3 Starts -->
+            <fieldset>
+                <legend>Estimated Body Fat Percentage:</legend>
+                <label for="bodyFat1">3 to 4%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat1" required>
+                <label for="bodyFat2">6 to 7%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat2" required>
+                <label for="bodyFat3">10 to 12%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat3" required>
+                <label for="bodyFat4">15%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat4" required>
+                <label for="bodyFat5">20%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat5" required>
+                <label for="bodyFat6">25%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat6" required>
+                <label for="bodyFat7">30%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat7" required>
+                <label for="bodyFat8">35%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat8" required>
+                <label for="bodyFat9">40%</label>
+                <input type="radio" name="bodyFatChoice" id="bodyFat9" required>
+            </fieldset>
+        <!-- Step 3 Ends -->
+        <!-- Step 4 Starts -->
+            <fieldset>
+                <legend>Goal:</legend>
+                <label for="loseFat">Lose Fat:</label>
+                <input type="radio" name="goalChoice" id="loseFat" required>
+                <label for="recomp">Recompose:</label>
+                <input type="radio" name="goalChoice" id="recomp" required>
+                <label for="leanGain">Lean Gain:</label>
+                <input type="radio" name="goalChoice" id="leanGain" required>
+                <button>Submit</button>
+            </fieldset>
+        <!-- Step 4 Ends -->
+        </form>
+    </footer>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
