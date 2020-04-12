@@ -4,77 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macronutrient Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif; -->
+    <!-- nst red: #ec393a -->
+    <!-- hover red: #d43334 -->
+    <!-- text on button: #ffeaea -->
+    <!-- nst black: #181618 -->
+    <!-- nst white: #f5fafd -->
+    <!-- button padding: 8px 24px; -->
+    <!-- button radius: 4px; -->
 </head>
 <body>
-    <!-- Step 2: Gender radio -->
-    <!-- Step 3a: Bodyfat male x 8 radio -->
-    <!-- Step 3b: Bodyfat female x 8 radio -->
-    <!-- Step 4a: Male goal -->
-    <!-- Step 4b: Female goal -->
-    <header>
-        <h1>Macronutrient Calculator</h1>
-        <p>Get started below.</p>
+    <header class="header-section wrapper">
+        <h1 class="header-section__brand">Macronutrient Calculator</h1>
+        <p class="main-paragraph main-paragraph--header">Get started below.</p>
     </header>
-    <main>
-        
+    <main class="calculator-results wrapper">
+        <!-- Add ariadescribedby attributes -->
+        <!-- Step 1 -->
+        <form action="#" method="#" name="macro-calculator" class="calculator-results__form">
+            <ul class="form__progress">
+                <li class="progress__stage progress__stage--current"></li>
+                <li class="progress__stage"></li>
+                <li class="progress__stage"></li>
+            </ul>
+            <fieldset class="form__stage form__stage--current">
+                <label for="full-name" autocapitalize="true">Full Name:</label>
+                <input type="text" name="full-name" placeholder="Full Name" id="full-name" required>
+                <label for="email-address">Email:</label>
+                <input type="email" name="email-address" placeholder="Email Address" id="email-address" required>
+                <button type="button" class="button button--main">Get Started</button>
+            </fieldset>
+        <!-- Step 1 -->
+        <!-- Step 2 -->
+            <fieldset class="form__stage">
+                <legend>
+                    <h2>Profile</h2>
+                </legend>
+                <div class="stage__container">
+                    <h3>Bodyweight</h3>
+                    <label for="bodyWeight">Bodyweight:</label>
+                    <input type="text" name="body-weight" id="body-weight" required>
+                </div>
+
+                <div class="stage__container">
+                    <h3>Gender</h3>
+                    <label for="gender-male">Male:</label>
+                    <input type="radio" name="gender-choice" id="gender-male" required>
+                    <label for="gender-female">Female:</label>
+                    <input type="radio" name="gender-choice" id="gender-female" required>
+                </div>
+
+                <div class="stage__container">
+                    <h3>Estimated Body Fat Percentage</h3>
+                    <label for="body-fat-1">3 to 4%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-1" required>
+                    <label for="body-fat-2">6 to 7%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-2" required>
+                    <label for="body-fat-3">10 to 12%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-3" required>
+                    <label for="body-fat-4">15%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-4" required>
+                    <label for="body-fat-5">20%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-5" required>
+                    <label for="body-fat-6">25%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-6" required>
+                    <label for="body-fat-7">30%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-7" required>
+                    <label for="body-fat-8">35%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-8" required>
+                    <label for="body-fat-9">40%</label>
+                    <input type="radio" name="body-fat-choice" id="body-fat-9" required>
+                </div>
+                <!-- Should this be a nav? -->
+                <div class="stage__container stage__container--buttons">
+                    <button type="button" class="button button--main">Previous</button>
+                    <button type="button" class="button button--main">Next</button>
+                </div>
+            </fieldset>
+        <!-- Step 2 -->
+        <!-- Step 3 -->
+            <fieldset class="form__stage">
+                <legend>
+                    <h2>Goal</h2>
+                </legend>
+                <label for="lose-fat">Lose Fat:</label>
+                <input type="radio" name="goal-choice" id="lose-fat" required>
+                <label for="recomp">Recompose:</label>
+                <input type="radio" name="goal-choice" id="recomp" required>
+                <label for="lean-gain">Lean Gain:</label>
+                <input type="radio" name="goal-choice" id="lean-gain" required>
+                <button class="button button--main">Submit</button>
+            </fieldset>
+        <!-- Step 3 -->
+        </form>
+        <!-- Results -->
+        <div class="calculator-results__results">
+
+        </div>
+        <!-- Results -->
     </main>
     <footer>
-        <!-- Add ariadescribedby attributes -->
-        <!-- Step 1 Starts -->
-        <form action="" method="" name="">
-            <fieldset>
-                <label for="fullName" autocapitalize="true">Full Name:</label>
-                <input type="text" name="fullName" placeholder="Full Name" id="fullName" required>
-                <label for="emailAddress">Email:</label>
-                <input type="email" name="emailAddress" placeholder="Email Address" id="emailAddress" required>
-            </fieldset>
-        <!-- Step 1 Ends -->
-        <!-- Step 2 Starts -->
-            <fieldset>
-                <legend>Gender:</legend>
-                <label for="genderMale">Male:</label>
-                <input type="radio" name="genderChoice" id="genderMale" required>
-                <label for="genderFemale">Female:</label>
-                <input type="radio" name="genderChoice" id="genderFemale" required>
-            </fieldset>
-        <!-- Step 2 Ends -->
-        <!-- Step 3 Starts -->
-            <fieldset>
-                <legend>Estimated Body Fat Percentage:</legend>
-                <label for="bodyFat1">3 to 4%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat1" required>
-                <label for="bodyFat2">6 to 7%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat2" required>
-                <label for="bodyFat3">10 to 12%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat3" required>
-                <label for="bodyFat4">15%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat4" required>
-                <label for="bodyFat5">20%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat5" required>
-                <label for="bodyFat6">25%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat6" required>
-                <label for="bodyFat7">30%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat7" required>
-                <label for="bodyFat8">35%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat8" required>
-                <label for="bodyFat9">40%</label>
-                <input type="radio" name="bodyFatChoice" id="bodyFat9" required>
-            </fieldset>
-        <!-- Step 3 Ends -->
-        <!-- Step 4 Starts -->
-            <fieldset>
-                <legend>Goal:</legend>
-                <label for="loseFat">Lose Fat:</label>
-                <input type="radio" name="goalChoice" id="loseFat" required>
-                <label for="recomp">Recompose:</label>
-                <input type="radio" name="goalChoice" id="recomp" required>
-                <label for="leanGain">Lean Gain:</label>
-                <input type="radio" name="goalChoice" id="leanGain" required>
-                <button>Submit</button>
-            </fieldset>
-        <!-- Step 4 Ends -->
-        </form>
     </footer>
     <script src="./scripts/script.js"></script>
 </body>
