@@ -12,48 +12,68 @@
     <!-- text on button: #ffeaea -->
     <!-- nst black: #181618 -->
     <!-- nst white: #f5fafd -->
+    <!-- mid grey: #8b8a8b -->
+    <!-- dark grey: #525152 -->
     <!-- button padding: 8px 24px; -->
     <!-- button radius: 4px; -->
 </head>
 <body>
     <header class="header-section wrapper">
-        <h1 class="header-section__brand">Macronutrient Calculator</h1>
-        <p class="main-paragraph main-paragraph--header">Get started below.</p>
+        <a href="#" class="header-section__branding"><img src="./assets/main-brand.svg" alt="#"></a>
+        <h1 class="main-heading">Get started today with the <span class="line-break">one and only diet tailored to you</span></h1>
+        <p class="main-paragraph main-paragraph--header">Use our calculator to set yourself up with individualized <span class="line-break">calories and macronutrients that serve your goal.</span></p>
     </header>
+
+
     <main class="calculator-results wrapper">
         <!-- Add ariadescribedby attributes -->
         <!-- Step 1 -->
         <form action="#" method="#" name="macro-calculator" class="calculator-results__form">
-            <ul class="form__progress">
+
+            <ul class="form__progress clearfix">
                 <li class="progress__stage progress__stage--current"></li>
                 <li class="progress__stage"></li>
                 <li class="progress__stage"></li>
             </ul>
-            <fieldset class="form__stage form__stage--current">
-                <label for="full-name" autocapitalize="true">Full Name:</label>
+            
+            <!-- <fieldset class="form__stage form__stage--current">
+                <label for="full-name" autocapitalize="words" class="sr-only">Full Name:</label>
                 <input type="text" name="full-name" placeholder="Full Name" id="full-name" required>
-                <label for="email-address">Email:</label>
+                <label for="email-address" class="sr-only">Email:</label>
                 <input type="email" name="email-address" placeholder="Email Address" id="email-address" required>
                 <button type="button" class="button button--main">Get Started</button>
-            </fieldset>
+            </fieldset> -->
         <!-- Step 1 -->
+
+
         <!-- Step 2 -->
-            <fieldset class="form__stage">
+        <fieldset class="form__stage">
                 <legend>
                     <h2>Profile</h2>
                 </legend>
                 <div class="stage__container">
-                    <h3>Bodyweight</h3>
-                    <label for="bodyWeight">Bodyweight:</label>
-                    <input type="text" name="body-weight" id="body-weight" required>
+                    <h3>Measurement</h3>
+                    <label for="metric">Metric:</label>
+                    <input type="radio" name="unit-of-measure" id="metric" required>
+                    <label for="imperial">Imperial:</label>
+                    <input type="radio" name="unit-of-measure" id="imperial" required>
                 </div>
 
                 <div class="stage__container">
+                    <h3>Bodyweight</h3>
+                    <label for="body-weight" class="sr-only">Bodyweight:</label>
+                    <input type="text" name="body-weight" id="body-weight" placeholder="In Pounds" required>
+                </div>
+
+                <div class="stage__container stage__container--radio">
                     <h3>Gender</h3>
-                    <label for="gender-male">Male:</label>
-                    <input type="radio" name="gender-choice" id="gender-male" required>
-                    <label for="gender-female">Female:</label>
-                    <input type="radio" name="gender-choice" id="gender-female" required>
+                        <div class="radio-grouping">
+                        <input type="radio" name="gender-choice" id="gender-male" required>
+                        <label for="gender-male" class="gender-male__button">Male</label>
+                            
+                        <input type="radio" name="gender-choice" id="gender-female" required>
+                        <label for="gender-female"  class="gender-female__button">Female:</label>
+                    </div>
                 </div>
 
                 <div class="stage__container">
@@ -85,7 +105,7 @@
             </fieldset>
         <!-- Step 2 -->
         <!-- Step 3 -->
-            <fieldset class="form__stage">
+            <!-- <fieldset class="form__stage">
                 <legend>
                     <h2>Goal</h2>
                 </legend>
@@ -96,16 +116,17 @@
                 <label for="lean-gain">Lean Gain:</label>
                 <input type="radio" name="goal-choice" id="lean-gain" required>
                 <button class="button button--main">Submit</button>
-            </fieldset>
+            </fieldset> -->
         <!-- Step 3 -->
         </form>
         <!-- Results -->
-        <div class="calculator-results__results">
+        <!-- <div class="calculator-results__results">
 
-        </div>
+        </div> -->
         <!-- Results -->
     </main>
-    <footer>
+    <footer class="footer-section wrapper">
+        <p class="footer-section__copyright">© NOSUCHTHING 2016-2019</p>
     </footer>
     <script src="./scripts/script.js"></script>
 </body>

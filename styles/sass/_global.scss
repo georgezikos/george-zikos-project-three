@@ -25,6 +25,24 @@ h6 {
     margin: 0;
 }
 
+h2,
+h3 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
 a {
     text-decoration: none;
 }
@@ -41,9 +59,9 @@ img {
 }
 
 .wrapper {
-    max-width: 1680px;
-    width: 90%;
+    max-width: 840px;
     margin: 0 auto;
+    padding: 0 130px;
 }
 
 // Header Section
@@ -53,44 +71,121 @@ body {
     font-size: 1.5rem;
 }
 
-header {
-    text-align: center;
-    border: 1px solid red;
-    height: 20vh;
+.main-paragraph {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 0.035rem;
+    line-height: 1.4;
+}
+
+.line-break {
+    display: block;
+}
+
+// Branding Section
+.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 32.5vh;
+    min-height: 215px;
+    padding-top: 80px;
+    text-align: left;
+    // border: 1px solid red;
+}
+
+.header-section__branding {
+    width: 250px;
+    margin-bottom: 20px;
+    // border: 1px solid red;
+}
+
+.main-heading {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.02rem;
+    line-height: 1.25;
+    // border: 1px solid red;
+}
+
+.main-paragraph--header {
+    font-size: 1.6rem;
+    // border: 1px solid red;
+    margin: 0;
 }
 
 // Calculator and Results Section
-main {
-    height: 80vh;
-    border: 1px solid red;
+.calculator-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 65px;
+    // height: 62.5vh;
+    // border: 1px solid red;
 }
-form {
-    border: solid red 1px;
-    width: 50%;
+
+// Form
+.form__progress {
+    margin-bottom: 60px;
+    height: 30px;
+    counter-reset: step;
+    text-align: center;
+}
+
+.progress__stage {
+    width: calc(100% / 3);
+    float: left;
+    // border: solid red 1px;
+}
+
+.progress__stage:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    line-height: 3rem;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #8b8a8b;
+    background: #525152;
     margin: 0 auto;
-    height: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
-fieldset {
-    border: solid red 1px;
-    padding: 0;
-    margin: 0;
-}
-
-legend {
-    padding: 0;
-    margin: 0;
+.progress__stage--current:before {
+    background: #ec393a;
+    color: #ffeaea;
 }
 
 .form__stage {
-    // text-align: center;
+    border: none;
+    padding: 0 0 60px 0;
+    margin: 0;
+}
+
+// Title attribute?
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
 }
 
 input[type="text"],
 input[type="email"] {
+    font-size: 1.5rem;
     display: block;
+    font-size: 1.5rem;
+    letter-spacing: 0.035rem;
+    line-height: 1.4;
+    color: #181618;
+    background-color: #f3f3f3;
     width: 100%;
-    padding: 14px;
+    padding: 0 14px;
+    margin-bottom: 15px;
     height: 40px;
     border: none;
     border-radius: 4px;
@@ -100,8 +195,163 @@ input[type="email"] {
     -o-border-radius: 4px;
 }
 
-// Add mouse pointer change on hover
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: #8b8a8b;
+}
+
+// Form Step 2
+.stage__container {
+    margin-bottom: 40px;
+    // border: 1px solid red;
+}
+
+.stage__container--buttons {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stage__container--buttons > .button--main {
+    width: 45%;
+    
+}
+
+.stage__container--radio {
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// Regex for numbers only?
+h3 ~ input[type="text"] {
+    margin-bottom: 0;
+}
+
+.gender-male__button,
+.gender-female__button {
+    position: relative;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    margin-right: 20px;
+    // border: 1px solid red;
+}
+
+.gender-male__button::before,
+.gender-male__button::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.gender-female__button::before,
+.gender-female__button::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.gender-male__button::before{
+    content: '';
+    background-image: url(../assets/male.jpg);
+    background-size: cover;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    border: 1px solid #8b8a8b;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.gender-male__button:after {
+    content: "";
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: background-color 250ms ease;
+    -webkit-transition: background-color 250ms ease;
+    -moz-transition: background-color 250ms ease;
+    -ms-transition: background-color 250ms ease;
+    -o-transition: background-color 250ms ease;
+}
+
+.gender-male__button:hover::after {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.radio-grouping input[type="radio"]:checked + .gender-male__button::after {
+    content: "YES";
+    padding-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+    right: 100px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.gender-female__button::before{
+    content: '';
+    background-image: url(../assets/female.png);
+    background-size: cover;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    border: 1px solid #8b8a8b;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.gender-female__button:after {
+    content: "";
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: background-color 250ms ease;
+    -webkit-transition: background-color 250ms ease;
+    -moz-transition: background-color 250ms ease;
+    -ms-transition: background-color 250ms ease;
+    -o-transition: background-color 250ms ease;
+}
+
+.gender-female__button:hover:after {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.radio-grouping input[type="radio"]:checked + .gender-female__button::after {
+    content: "YES";
+    padding-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+    right: 100px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    letter-spacing: 0.035rem;
+    line-height: 1.4;
     height: 40px;
     padding: 8px 24px;
     border: none;
@@ -115,4 +365,29 @@ input[type="email"] {
 .button--main {
     background-color: #ec393a;
     color: #ffeaea;
+    width: 100%;
+    transition: background-color 250ms ease;
+    -webkit-transition: background-color 250ms ease;
+    -moz-transition: background-color 250ms ease;
+    -ms-transition: background-color 250ms ease;
+    -o-transition: background-color 250ms ease;
+}
+
+// Focus State Reminder
+// Mouse Pointer WTF
+.button--main:hover {
+    background-color: #d43334;
+}
+
+// Footer Section
+.footer-section {
+    height: 5vh;
+    font-size: 1.2rem;
+    color: #8b8a8b;
+    text-align: center;
+}
+
+.footer-section__copyright {
+    margin: 0;
+    padding-top: 10px;
 }
