@@ -249,6 +249,9 @@ html {
   overflow: hidden;
 }
 
+/* Portrait Tablet and Small Desktops */
+/* Landscape Phone to Portrait Tablet */
+/* Landscape Phones and Down */
 html {
   font-size: 62.5%;
   font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -302,6 +305,24 @@ img {
   padding: 0 130px;
 }
 
+@media (max-width: 840px) {
+  .wrapper {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 5%;
+  }
+}
+
 body {
   background-color: #181618;
   color: #f5fafd;
@@ -330,7 +351,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 32.5vh;
   min-height: 215px;
   padding-top: 80px;
   text-align: left;
@@ -797,7 +817,7 @@ h3 ~ input[type="text"] {
 }
 
 .footer-section {
-  height: 5vh;
+  padding-bottom: 5%;
   font-size: 1.2rem;
   color: #8b8a8b;
   text-align: center;

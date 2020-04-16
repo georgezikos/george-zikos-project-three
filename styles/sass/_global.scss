@@ -10,6 +10,15 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+/* Portrait Tablet and Small Desktops */
+// @media (max-width: 940px) {
+
+/* Landscape Phone to Portrait Tablet */
+// @media (max-width: 768px) {
+
+/* Landscape Phones and Down */
+// @media (max-width: 480px) {
+
 // Base Styles
 html {
     font-size: 62.5%;
@@ -64,6 +73,24 @@ img {
     padding: 0 130px;
 }
 
+@media (max-width: 840px) {
+    .wrapper {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 0 5%;
+    }
+}
+
 // Header Section
 body {
     background-color: #181618;
@@ -87,7 +114,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 32.5vh;
+    // height: 32.5vh;
     min-height: 215px;
     padding-top: 80px;
     text-align: left;
@@ -559,7 +586,8 @@ h3 ~ input[type="text"] {
 
 // Footer Section
 .footer-section {
-    height: 5vh;
+    // height: 5vh;
+    padding-bottom: 5%;
     font-size: 1.2rem;
     color: #8b8a8b;
     text-align: center;
