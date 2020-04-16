@@ -29,7 +29,7 @@
     <main class="calculator-results wrapper">
         <!-- Add ariadescribedby attributes -->
         <!-- Step 1 -->
-        <form action="#" method="#" name="macro-calculator" class="calculator-results__form">
+        <form action="#" method="#" name="macro-calculator" class="calculator-results__form" id="calculator">
 
             <ul class="form__progress clearfix">
                 <li class="progress__stage progress__stage--current"></li>
@@ -42,41 +42,41 @@
                 <input type="text" name="full-name" placeholder="Full Name" id="full-name" required>
                 <label for="email-address" class="sr-only">Email:</label>
                 <input type="email" name="email-address" placeholder="Email Address" id="email-address" required>
-                <button type="button" class="button button--main">Get Started</button>
+                <button type="button" class="button button--main" id="get-started">Get Started</button>
             </fieldset>
         <!-- Step 1 -->
 
 
         <!-- Step 2 -->
-        <fieldset class="form__stage">
+            <fieldset class="form__stage">
                 <legend>
                     <h2>Profile</h2>
                 </legend>
-                <div class="stage__container">
+                <div class="stage__container stage__container--measure">
                     <h3>Measurement</h3>
                     <p class="main-paragraph main-paragraph--description">What unit of measurement do you use in your part of the world?</p>
                     <div class="choice-group choice-group--unit">
-                        <input type="radio" name="unit-measure" id="metric" required>
+                        <input type="radio" name="unit-measure" id="metric" value="1" required>
                         <label for="metric" class="picture-button picture-button--metric">Metric</label>
-                        <input type="radio" name="unit-measure" id="imperial" required>
+                        <input type="radio" name="unit-measure" id="imperial" value="2.20462" required>
                         <label for="imperial" class="picture-button picture-button--imperial">Imperial</label>
                     </div>
                 </div>
 
-                <div class="stage__container">
+                <div class="stage__container stage__container--bodyweight">
                     <h3>Bodyweight</h3>
                     <label for="body-weight" class="sr-only">Bodyweight</label>
                     <input type="text" name="body-weight" id="body-weight" placeholder="In Pounds" required>
                 </div>
-                <div class="stage__container">
+                <div class="stage__container stage__container--gender">
                     <h3>Gender</h3>
                     <p class="main-paragraph main-paragraph--description">Help us set you up with the best possible outcome based on your biological gender.</p>
 
                     <div class="choice-group choice-group--gender">
-                        <input type="radio" name="gender-choice" id="gender-male" required>
+                        <input type="radio" name="gender-choice" id="gender-male" value="male" required>
                         <label for="gender-male" class="picture-button picture-button--male">Male</label>
                         
-                        <input type="radio" name="gender-choice" id="gender-female" required>
+                        <input type="radio" name="gender-choice" id="gender-female" value="female" required>
                         <label for="gender-female"  class="picture-button picture-button--female">Female</label>
                     </div>
 
@@ -85,39 +85,67 @@
                     <h3>Estimated Body Fat Percentage</h3>
                     <p class="main-paragraph main-paragraph--description">Choose the image that is an accurate representation of your current physique.</p>
 
-                    <div class="choice-group choice-group--bodyfat">
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-1" required>
+                    <div class="choice-group choice-group--bodyfat choice-group--male">
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-1" value="1.3" required>
                         <label for="bodyfat-1" class="picture-button picture-button--bodyfat picture-button--bodyfat-1">3 to 4%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-2" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-2" value="1.3"required>
                         <label for="bodyfat-2" class="picture-button picture-button--bodyfat picture-button--bodyfat-2">6 to 7%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-3" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-3" value="1.15" required>
                         <label for="bodyfat-3" class="picture-button picture-button--bodyfat picture-button--bodyfat-3">10 to 12%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-4" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-4" value="1.15" required>
                         <label for="bodyfat-4" class="picture-button picture-button--bodyfat picture-button--bodyfat-4">15%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-5" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-5" value="1" required>
                         <label for="bodyfat-5" class="picture-button picture-button--bodyfat picture-button--bodyfat-5">20%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-6" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-6" value="1" required>
                         <label for="bodyfat-6" class="picture-button picture-button--bodyfat picture-button--bodyfat-6">25%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-7" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-7" value="0.8" required>
                         <label for="bodyfat-7" class="picture-button picture-button--bodyfat picture-button--bodyfat-7">30%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-8" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-8" value="0.8" required>
                         <label for="bodyfat-8" class="picture-button picture-button--bodyfat picture-button--bodyfat-8">35%</label>
 
-                        <input type="radio" name="bodyfat-choice" id="bodyfat-9" required>
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-9" value="0.8" required>
                         <label for="bodyfat-9" class="picture-button picture-button--bodyfat picture-button--bodyfat-9">40%</label>
+                    </div>
+                    <div class="choice-group choice-group--bodyfat choice-group--female">
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-10" value="1" required>
+                        <label for="bodyfat-10" class="picture-button picture-button--bodyfat picture-button--bodyfat-1">3 to 4%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-11" value="1" required>
+                        <label for="bodyfat-11" class="picture-button picture-button--bodyfat picture-button--bodyfat-2">6 to 7%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-12" value="1" required>
+                        <label for="bodyfat-12" class="picture-button picture-button--bodyfat picture-button--bodyfat-3">10 to 12%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-13" value="1" required>
+                        <label for="bodyfat-13" class="picture-button picture-button--bodyfat picture-button--bodyfat-4">15%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-14" value="0.8" required>
+                        <label for="bodyfat-14" class="picture-button picture-button--bodyfat picture-button--bodyfat-5">20%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-15" value="0.8" required>
+                        <label for="bodyfat-15" class="picture-button picture-button--bodyfat picture-button--bodyfat-6">25%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-16" value="0.8" required>
+                        <label for="bodyfat-16" class="picture-button picture-button--bodyfat picture-button--bodyfat-7">30%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-17" value="0.8" required>
+                        <label for="bodyfat-17" class="picture-button picture-button--bodyfat picture-button--bodyfat-8">35%</label>
+                    
+                        <input type="radio" name="bodyfat-choice" id="bodyfat-18" value="0.8" required>
+                        <label for="bodyfat-18" class="picture-button picture-button--bodyfat picture-button--bodyfat-9">40%</label>
                     </div>
                 </div>
                 <!-- Should this be a nav? -->
                 <div class="stage__container stage__container--buttons">
-                    <button type="button" class="button button--main">Previous</button>
-                    <button type="button" class="button button--main">Next</button>
+                    <button type="button" class="button button--main button--previous">Previous</button>
+                    <button type="button" class="button button--main button--next" id="next">Next</button>
                 </div>
             </fieldset>
         <!-- Step 2 -->
@@ -129,18 +157,18 @@
                         <p class="main-paragraph main-paragraph--description">What are you hoping to achieve with your diet?</p>
                     </legend>
                     <div class="choice-group choice-group--goal">
-                        <input type="radio" name="goal-choice" id="lose-fat" required>
+                        <input type="radio" name="goal-choice" id="lose-fat" value="12" required>
                         <label for="lose-fat" class="picture-button picture-button--lose">Fat Loss</label>
-                        <input type="radio" name="goal-choice" id="recomp" required>
+                        <input type="radio" name="goal-choice" id="recomp"  value="14" required>
                         <label for="recomp" class="picture-button picture-button--recomp">Recomposition</label>
-                        <input type="radio" name="goal-choice" id="lean-gain" required>
+                        <input type="radio" name="goal-choice" id="lean-gain"  value="16" required>
                         <label for="lean-gain" class="picture-button picture-button--gains">Lean Gains</label>
                     </div>
                 </div>
                 <!-- Should this be a nav? -->
                 <div class="stage__container stage__container--buttons">
-                    <button type="button" class="button button--main">Previous</button>
-                    <button type="button" class="button button--main">Submit</button>
+                    <button type="button" class="button button--main button--previous">Previous</button>
+                    <button type="button" class="button button--main" id="submit">Submit</button>
                 </div>
             </fieldset>
         <!-- Step 3 -->
@@ -148,29 +176,29 @@
         <!-- Results -->
         <section class="stage__container">
             <div class="results">
-                <h3 class="main-heading main-heading--results">The best place to start is here:</h3>
+                <h3 class="main-heading main-heading--results"></h3>
                 <ul class="results__macros main-paragraph">
                     <li>
-                        <p>Protein: <span>130</span>g</p>
+                        <p>Protein: <span class="results__protein"></span></p>
                     </li>
                     <li>
-                        <p>Fats: <span>70</span>g</p>
+                        <p>Fats: <span class="results__fats"></span></p>
                     </li>
                     <li>
-                        <p>Carbs: <span>275</span>g</p>
+                        <p>Carbs: <span class="results__carbs"></span></p>
                     </li>
                     <li>
-                        <p>Fibre: <span>25</span>g</p>
+                        <p>Fibre: <span class="results__fibre"></span></p>
                     </li>
                     <li>
-                        <p>Water: <span>3</span>L</p>
+                        <p>Water: <span class="results__water"></span></p>
                     </li>
                     <li>
-                        <p>Total Calories: <span>2,250</span></p>
+                        <p>Total Calories: <span class="results__calories"></span></p>
                     </li>
                 </ul>
                 <p class="results__macros main-paragraph results__macros--reminder">These are your daily intake values.</p>
-                <button class="button button--main button--results">Start Again</button>
+                <button class="button button--main button--results" type="reset" id="reset">Start Again</button>
             </div>
         </section>
         <!-- Results -->
@@ -178,6 +206,7 @@
     <footer class="footer-section wrapper">
         <p class="footer-section__copyright">© NOSUCHTHING 2016-2019</p>
     </footer>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -130,17 +130,24 @@ body {
     // border: 1px solid red;
 }
 
+// Experiment!!
+.calculator-results__form {
+    position: relative;
+}
+
 // Form -- Global
 .form__progress {
     margin-bottom: 60px;
     height: 30px;
     counter-reset: step;
     text-align: center;
+    overflow: hidden;
 }
 
 .progress__stage {
     width: calc(100% / 3);
     float: left;
+    position: relative;
     // border: solid red 1px;
 }
 
@@ -171,6 +178,12 @@ body {
     border: none;
     padding: 0 0 60px 0;
     margin: 0;
+    position: relative;
+    display: none;
+}
+
+.form__stage--current {
+    display: block;
 }
 
 // Add Title attribute
@@ -219,7 +232,11 @@ input[type="email"]::placeholder {
 
 .stage__container--buttons > .button--main {
     width: 45%;
-    
+}
+
+.button--previous,
+.button--next {
+    // display: none;
 }
 
 .choice-group {
@@ -311,7 +328,16 @@ h3 ~ input[type="text"] {
     background-size: cover;
 }
 
+// Bodyweight Section
+.stage__container--bodyweight {
+    // display: none;
+}
+
 // Gender Section
+.stage__container--gender {
+    // display: none;
+}
+
 .picture-button--male:before {
     background-image: url(../assets/male.jpg);
     background-size: cover;
@@ -323,10 +349,25 @@ h3 ~ input[type="text"] {
 }
 
 // Body Fat Section
+.stage__container--bodyfat {
+    // display: none;
+}
+
 .choice-group--bodyfat {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
     max-width: calc(360px + 40px);
     min-height: calc(360px + 40px);
     // border: 1px solid red;
+}
+
+// Male Body Fat Section
+.choice-group--male {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    // display: none;
 }
 
 .picture-button--bodyfat-1:before {
@@ -335,7 +376,7 @@ h3 ~ input[type="text"] {
 }
 
 .picture-button--bodyfat-2:before {
-    background-image: url(../assets/female.png);
+    background-image: url(../assets/male.jpg);
     background-size: cover;
 }
 
@@ -345,7 +386,7 @@ h3 ~ input[type="text"] {
 }
 
 .picture-button--bodyfat-4:before {
-    background-image: url(../assets/female.png);
+    background-image: url(../assets/male.jpg);
     background-size: cover;
 }
 
@@ -355,7 +396,7 @@ h3 ~ input[type="text"] {
 }
 
 .picture-button--bodyfat-6:before {
-    background-image: url(../assets/female.png);
+    background-image: url(../assets/male.jpg);
     background-size: cover;
 }
 
@@ -365,12 +406,62 @@ h3 ~ input[type="text"] {
 }
 
 .picture-button--bodyfat-8:before {
-    background-image: url(../assets/female.png);
+    background-image: url(../assets/male.jpg);
     background-size: cover;
 }
 
 .picture-button--bodyfat-9:before {
     background-image: url(../assets/male.jpg);
+    background-size: cover;
+}
+
+// Female Body Fat Section
+.choice-group--female {
+    // display: none;
+}
+
+.choice-group--female .picture-button--bodyfat-1:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-2:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-3:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-4:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-5:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-6:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-7:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-8:before {
+    background-image: url(../assets/female.png);
+    background-size: cover;
+}
+
+.choice-group--female .picture-button--bodyfat-9:before {
+    background-image: url(../assets/female.png);
     background-size: cover;
 }
 
@@ -432,6 +523,8 @@ h3 ~ input[type="text"] {
     padding: 25px 30px;
     border-radius: 8px;
     text-align: center;
+    position: relative;
+    display: none;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
