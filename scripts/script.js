@@ -7,6 +7,9 @@ $(document).bind('keypress', function(e) {
     }
 });
 
+const viewportmeta = document.querySelector('meta[name="viewport"]');
+viewportmeta.content = 'user-scalable=NO, width=device-width, initial-scale=1.0';
+
 const $getStarted = $('#get-started');
 $getStarted.on('click', function(){
     const $fullName = $('#full-name').val();
